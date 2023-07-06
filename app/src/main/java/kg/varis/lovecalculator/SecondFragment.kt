@@ -1,12 +1,12 @@
 package kg.varis.lovecalculator
 
 import android.os.Bundle
-import android.provider.Telephony.TextBasedSmsColumns.BODY
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kg.varis.lovecalculator.databinding.FragmentSecondBinding
+import kg.varis.lovecalculator.remote.LoveModel
 
 class SecondFragment : Fragment() {
 

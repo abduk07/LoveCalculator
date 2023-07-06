@@ -1,4 +1,4 @@
-package kg.varis.lovecalculator
+package kg.varis.lovecalculator.remote
 
 import com.google.gson.annotations.SerializedName
 
