@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="4dp"
     android:background="#FFD9DC"
-    tools:context=".SecondFragment">
+    tools:context=".ui.secondfragment.SecondFragment">
 
     <ImageView
         android:id="@+id/iv_man_and_woman_with_heart"

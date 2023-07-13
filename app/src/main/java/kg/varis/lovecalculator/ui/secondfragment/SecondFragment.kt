@@ -1,24 +1,17 @@
-package kg.varis.lovecalculator
+package kg.varis.lovecalculator.ui.secondfragment
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import by.kirich1409.viewbindingdelegate.viewBinding
+import kg.varis.lovecalculator.R
+import kg.varis.lovecalculator.ui.firstfragment.FirstFragment
 import kg.varis.lovecalculator.databinding.FragmentSecondBinding
-import kg.varis.lovecalculator.remote.LoveModel
+import kg.varis.lovecalculator.model.LoveModel
 
-class SecondFragment : Fragment() {
+class SecondFragment : Fragment(R.layout.fragment_second) {
 
-    private lateinit var binding: FragmentSecondBinding
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentSecondBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+    private  val binding: FragmentSecondBinding by viewBinding()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
