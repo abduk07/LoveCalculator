@@ -15,10 +15,9 @@ class Repository @Inject constructor(private val api: LoveApi, private val dao: 
         dao.addData(loveModel)
     }
 
-    fun getList(loveModel: LoveModel) {
-        dao.getList()
+    fun getData(): List<LoveModel> {
+        return dao.getList()
     }
-
 
     fun getData(firstName: String, secondName: String): MutableLiveData<LoveModel> {
         val liveLove = MutableLiveData<LoveModel>()

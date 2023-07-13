@@ -22,6 +22,13 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         sendData()
+        historyNavigation()
+    }
+
+    private fun historyNavigation() {
+        binding.ivHistory.setOnClickListener {
+            findNavController().navigate(R.id.historyFragment)
+        }
     }
 
     private fun sendData() {
@@ -36,6 +43,7 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
                             R.id.secondFragment,
                             bundleOf(BODY to loveModel)
                         )
+                        viewModel.insert(loveModel)
                     }
             }
         }

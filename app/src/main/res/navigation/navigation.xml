@@ -20,4 +20,9 @@
         android:name="kg.varis.lovecalculator.ui.onboard.OnboardFragment"
         android:label="fragment_onboard"
         tools:layout="@layout/fragment_onboard" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="kg.varis.lovecalculator.ui.historyfragment.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>
