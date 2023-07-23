@@ -1,23 +1,23 @@
 package kg.varis.lovecalculator.ui.onboard.adapter
 
-import android.text.TextUtils.lastIndexOf
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import coil.load
+import kg.varis.lovecalculator.R
 import kg.varis.lovecalculator.databinding.ItemOnboardBinding
 import kg.varis.lovecalculator.model.OnBoardModel
 
-class OnBoardAdapter(private val finishClick: () -> Unit,private val skip:()-> Unit) :
+class OnBoardAdapter(private val finishClick: () -> Unit, private val skip: () -> Unit) :
     Adapter<OnBoardAdapter.OnBoardViewHolder>() {
 
+
     private var arrayList = arrayListOf<OnBoardModel>(
-        OnBoardModel("https://www.inspiredgenerations.com/img/Items/2619_The%20Peace,%20Love%20&%20Happy%20Hour%20Bar%20Board%20with%20Tiny%20White%20Heart%20Dish.jpg"),
-        OnBoardModel("https://www.inspiredgenerations.com/img/Items/2619_The%20Peace,%20Love%20&%20Happy%20Hour%20Bar%20Board%20with%20Tiny%20White%20Heart%20Dish.jpg"),
-        OnBoardModel("https://www.inspiredgenerations.com/img/Items/2619_The%20Peace,%20Love%20&%20Happy%20Hour%20Bar%20Board%20with%20Tiny%20White%20Heart%20Dish.jpg"),
-        OnBoardModel("https://www.inspiredgenerations.com/img/Items/2619_The%20Peace,%20Love%20&%20Happy%20Hour%20Bar%20Board%20with%20Tiny%20White%20Heart%20Dish.jpg")
+        OnBoardModel(R.raw.animation_lkfmisf8),
+        OnBoardModel(R.raw.animation_lkfmisf8),
+        OnBoardModel(R.raw.animation_lkfmisf8),
+        OnBoardModel(R.raw.animation_lkfmisf8)
     )
 
 
@@ -46,8 +46,6 @@ class OnBoardAdapter(private val finishClick: () -> Unit,private val skip:()-> U
         ViewHolder(binding.root) {
         fun onBind(model: OnBoardModel) {
             with(binding) {
-                ivOnboard.load(model.image)
-
                 btnStart.isVisible = adapterPosition == arrayList.lastIndex
                 btnStart.setOnClickListener {
                     finishClick()

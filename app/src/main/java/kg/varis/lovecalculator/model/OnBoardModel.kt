@@ -1,5 +1,7 @@
 package kg.varis.lovecalculator.model
 
+import com.airbnb.lottie.LottieAnimationView
+
 data class OnBoardModel(
-    val image: String
+    val image: Int? = null
 ) : java.io.Serializable
